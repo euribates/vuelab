@@ -1,8 +1,55 @@
 {% extends "base.html" %}
 
+{% block javascript %}
+{% verbatim %}
+<script>
+var data = {
+    title: 'Este es el título',
+    color: '#DD3399',
+    }
+
+
+var LevelIndicator = Vue.extend({
+    data: function() { return {
+        level: 3
+        }},
+    template: '<p>' +
+              '<button @click="dec">🡸</button>' +
+              '<span v-for="n in level">▊</span>' +
+              '({{ level }})' + 
+              '<button @click="inc">🡺</button>' +
+              '</p>',
+    methods: {
+        inc: function () { this.level += 1; },
+        dec: function () { if (this.level > 0) this.level -= 1; }
+        }
+    })
+
+Vue.component('level-indicator', LevelIndicator)
+
+var vueapp = new Vue({
+    el: '#app',
+    data: data
+    })
+</script>
+{% endverbatim %}
+
+{% endblock javascript %}
+
 {% block content %}
 
-<h2>{{ title }} lab1 <small>Componentes</small></h2>
+<div id="app">
+    Este es el div para Vue
 
+    {% verbatim %}
+
+        <p>{{ title }} : {{ color }}</p>
+
+        <p>Indicador: <level-indicator><level-indicator></p>
+
+    {% endverbatim %}
+
+
+</div>
 
 {% endblock %}
