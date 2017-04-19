@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
+{% block breadcrumbs %}
+
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li class="active">Lab1</li>
+    </ol>
+
+{% endblock breadcrumbs %}
+
+
 {% block javascript %}
 {% verbatim %}
 <script>
@@ -45,9 +55,11 @@ var vueapp = new Vue({
 
         <p>{{ title }} : {{ color }}</p>
 
+    {% endverbatim %}
+
         <p>Indicador: <level-indicator><level-indicator></p>
 
-    {% endverbatim %}
+        <p>Indicador 2: <level-indicator><level-indicator></p>
 
 
 </div>

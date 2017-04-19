@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block javascript %}
+
+    <script>
+
+    var data = {
+        title: 'Este es el título'
+        };
+
+    var vue_app = new Vue({
+        el: '#app',
+        data: data,
+        delimiters: ['[[', ']]']
+        });
+
+    </script>
+
+{% endblock javascript %}
+
+
+{% block content %}
+
+    <div id="app">
+
+        <h2>Este es el div para Vue</h2>
+
+        <h3> [[ title ]] </h3>
+        
+        {% verbatim %} <h3> {{ title }} </h3> {% endverbatim %}
+
+    </div>
+
+{% endblock %}

@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.homepage, name='homepage'),
     url(r'^lab1/', include('lab1.urls', namespace='lab1')),
+    url(r'^lab2/', include('lab2.urls', namespace='lab2')),
     ]

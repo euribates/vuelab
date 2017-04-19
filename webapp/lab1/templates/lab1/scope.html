@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block javascript %}
+{% verbatim %}
+<script>
+var data = {
+    title: 'Este es el título',
+    color: '#DD3399',
+    }
+
+
+var LevelIndicator = Vue.extend({
+    
+    template: '#indicator',
+
+    data: function() { 
+            return {
+                level: 3
+                }
+            },
+    
+    methods: {
+        inc: function () { this.level += 1; },
+        dec: function () { if (this.level > 0) this.level -= 1; }
+        },
+    delimiters: ['[[', ']]'],
+    props: ['color']
+    })
+
+Vue.component('level-indicator', LevelIndicator)
+
+var vueapp = new Vue({
+    el: '#app',
+    data: data,
+    delimiters: ['[[', ']]']
+    })
+</script>
+{% endverbatim %}
+
+{% endblock javascript %}
+
+{% block breadcrumbs %}
+
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="{% url 'lab1:index' %}">Lab1</a></li>
+      <li class="active">Scope</li>
+    </ol>
+
+{% endblock breadcrumbs %}
+
+
+{% block content %}
+
+<template id="indicator">
+<p> <button @click="dec">🡸</button>
+ <span v-for="n in level" v-bind:style="{ color: color }">▊</span>
+ ([[ level ]] [[ color ]])
+ <button @click="inc">🡺</button>
+</p>
+</template>
+
+
+<div id="app">
+    Este es el div para Vue
+
+        <p>[[ title ]] : [[ color ]]</p>
+
+
+        <p>Indicador: <level-indicator v-bind:color=color><level-indicator></p>
+
+
+
+</div>
+
+{% endblock %}

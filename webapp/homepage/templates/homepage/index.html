@@ -5,7 +5,11 @@
 <h2>{{ title }}</h2>
 
 <ul>
-    <li><b>Lab1</b>: <a href="{% url 'lab1:index' %}">Componentes</p></li>
+    <li><b>Lab1</b>: <a href="{% url 'lab1:index' %}">Componentes</a></p></li>
+      <ul class="list-group">
+       <li class="list-group-item"><a href="{% url 'lab1:scope' %}">Scope</a></li>
+      </ul> 
+    <li><b>Lab2</b>: <a href="{% url 'lab2:index' %}">Configuración</a></p></li>
 </ul>
 
 {% endblock %}

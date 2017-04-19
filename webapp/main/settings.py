@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'homepage',
     'lab1',
+    'lab2',
 ]
 
 MIDDLEWARE = [
