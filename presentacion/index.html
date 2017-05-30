@@ -12,6 +12,9 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+        <!-- Awesom fonts -->
+        <script src="https://use.fontawesome.com/9032323353.js"></script>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -25,7 +28,11 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section>
+				<section data-background-image="art/Harry-Potter-Orden-Fenix.jpg">
+                
+                </section>
+
+                <section>
                 
                 <h1>Vue.js</h1>
                 <h4>El <i>framework javascript</i> para <i>muggles</i></h4>
@@ -71,10 +78,80 @@
                 </section>
 
                 <section>
-                    <h4>Demasiadas interacciones cruzadas</h4>
-                    <h5>Código confuso, frágil y difícil de modificar</h5>
+                    <h3>Como debe funcionar</h3>
+                        <ul>
+                            <li>A la izquierda hay un listado de 
+                                comentarios, con un timestamp</li>
+                            <li>A medida que el vídeo avance, se debe resaltar el
+                                comentario pertinente</li>
+                            <li>Si pulsamos en el comentario, posiciona el vídeo
+                                en ese timestamp</li>
+                        </ul>
+                        <img src="art/video-parcan.png" width="300">
+
+                </section>
+               
+                <section>
+                    <h3>Hasta aquí, bien</h3>
+                    <ul>
+                    <li>Es factible hacerlo con jQuery</li>
+                    <li>De hecho, estaba así</li>
+                    <li>Pero llegan nuevas especificaciones</li>
+                        <ul>
+                            <li class="fragment">Contador de tiempo real (Hora de inicio + timestamp)</li>
+                            <li class="fragment">Controles play/pause adicionales</li>
+                            <li class="fragment">Al hacer pause, queremos cambiar la url
+                             </li>
+                            </ul>
+                    </ul>
+                    <aside class="notes">
+                        Añadir una marca de tipo #<offset> para poder 
+                        enlazar justo a ese momento.
+                    </aside>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Demasiadas interacciones cruzadas</li>
+                        <li>Código confuso, frágil y difícil de modificar</li>
+                        <li>Todos las funciones tienen que saber de todo</li>
+                        <li>Por ejemplo, el botón de pause debe:</p>
+                        <ul>
+                            <li class="fragment">Poner el vídeo en pausa</li>
+                            <li class="fragment">Cambiar la URL</li>
+                            <li class="fragment">Cambiar u propia image de 
+                                <i class="fa fa-pause" aria-hidden="true"></i> a
+                                <i class="fa fa-play" aria-hidden="true"></i></li>
+                            <li class="fragment">Parar el contador de tiempo real</li>
+                            <li class="fragment">etc ...</li>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Algo así</h2>
                     <img src="art/three-stooges.gif">
                 </section>
+
+                <section>
+                    <h2>Entornos reactivos</h2>
+
+                       <p>Para resolver estos problemas se desarrollan
+                        frameworks reactivos, que se basan en:</p>
+                        <ul>
+                        <li class="fragment">El patron <b>MVVM</b> (Modelo Vista VistaModelo)</li>
+                        <li class="fragment"><b>data-binding</b> y <b>two way data-binding</li>
+                        </ul>
+
+                </section>
+
+                <section>
+                    <h2>El patron <b>MVVM</b> (Modelo Vista VistaModelo)<h2>
+                    <p>Es una versión simplificada del patron <b>MVC</b>. En este
+                    caso tenemos un modelo y una vista (o vistas). Pero en
+                    este patrón la interacción 
+                    entre ellos es automática, no se implementa sino que se 
+                    declara.</p>
 
 
 
