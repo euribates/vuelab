@@ -140,18 +140,80 @@
                         frameworks reactivos, que se basan en:</p>
                         <ul>
                         <li class="fragment">El patron <b>MVVM</b> (Modelo Vista VistaModelo)</li>
-                        <li class="fragment"><b>data-binding</b> y <b>two way data-binding</li>
+                        <li class="fragment"><b>data-binding</b> y <b>two way data-binding</b></li>
                         </ul>
 
                 </section>
 
+
                 <section>
-                    <h2>El patron <b>MVVM</b> (Modelo Vista VistaModelo)<h2>
+                    
+                    <h2>El patron MVVM (Modelo Vista VistaModelo)</h2>
+
                     <p>Es una versión simplificada del patron <b>MVC</b>. En este
                     caso tenemos un modelo y una vista (o vistas). Pero en
                     este patrón la interacción 
-                    entre ellos es automática, no se implementa sino que se 
-                    declara.</p>
+                    entre ellos es <b class="fragment highlight-green">automática</b>, no se
+                    implementa sino que <b class="fragment highlight-green">se declara</b>.</p>
+
+                </section>
+
+                <section>
+                    <h2>Data-bindibg</h2>
+                    <p>Al cambiar un dato en el modelo, este cambio se 
+                    refleja o propaga de inmediato a la vista o vistas
+                    que dependan de él</p>
+                </section>
+
+                <section>
+                    <h2>Hola, mundo en Vue.js</h2>
+
+                    <p><a href="lab1.html">Lab 1 - Data binding</a></p>
+                </section>
+
+                <section data-background-image="art/lab1-1.png" data-background-size="contain">
+                </section>
+
+                </section>
+
+                <section>
+                    <h3>Obsérvese que...</h3>
+                    <ul>
+                        <li>Al iniciar Vue especificamos el elemento en el que puede 
+                        actuar, en este caso, <code class="fragment highlight-green">#app</code>. 
+                        Vue no podrá
+                        interactuar ni le afectará nada que no esté dentro de
+                        ese elemento.</li>
+
+                        <li>Usamos los delimitador <span class="fragment highlight-green">
+                        <code>{{</code>, <code>}}</code></span> para
+                        realizar un binding entre el contenido de la página y nuestro modelo.</li>
+
+                        <li>La página es <b class="fragment highlight-green">reactiva</b>.
+                    </ul>
+                    <aside class="notes">
+                        Cambiar el valor de data.nombre usando la consola
+                        </aside>
+                        
+                </section>
+
+                <section>
+                    <h2>Two-way data bindng</h2>
+                </section>
+
+                <section> 
+                    <h2>v-bind</h2>
+                    
+                    <p>Here we are encountering something new. The v-bind
+                    attribute you are seeing is called a directive. Directives
+                    are prefixed with v- to indicate that they are special
+                    attributes provided by Vue, and as you may have guessed,
+                    they apply special reactive behavior to the rendered DOM.
+                    Here it is basically saying “keep this element’s title
+                    attribute up-to-date with the message property on the Vue
+                    instance.”</p>
+                </section>
+
 
 
 
