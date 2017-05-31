@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Vue.js labs - lab 2 - v-html {% endblock %}
+
+{% block script %}
+    
+<script>
+data = {
+    'msg': '<p class="bg-warning">This is a <i>warning</i></p>'
+    };
+
+var vm = new Vue({
+    el:'#app',
+    delimiters: ['[[', ']]'],
+    data: data
+    });
+</script>
+
+{% endblock script %}
+
+{% block content %}
+    
+    <div id="app">
+        <div v-html="msg"></div>
+    </div>
+{% endblock content %}
+
+
+

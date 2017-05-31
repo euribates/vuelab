@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>VueLabs Demos</h1>
+
+    <ul>
+        <li><a href="{% url 'labs:lab1' %}">Lab 01: Data binding</a></li>
+        <li><a href="{% url 'labs:lab2' %}">Lab 02: v-html</a></li>
+    </ul>
+{% endblock content %}

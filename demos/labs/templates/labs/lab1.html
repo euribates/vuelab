@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} Vue.js lab - lab01 - Data binding {% endblock %}
+
+{% block script %}
+    <script>
+    data = {
+        'nombre': 'Zaratustra'
+        };
+
+    new Vue({
+        el:'#app',
+        delimiters: ['[[', ']]'],
+        data: data
+        });
+    </script>
+{% endblock script %}
+
+{% block content %}
+    <div id="app">
+    <p>hola, [[ nombre ]].</p>
+    </div>
+{% endblock content %}
+
+
+
