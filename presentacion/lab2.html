@@ -1,0 +1,27 @@
+<html>
+<head>
+ <title>Vue.js lab - lab02 - v-html</title>
+ <script src="lib/js/vue.js"></script>
+</head> 
+<body>
+<h1>Vue.js lab - lab02 - v-html</h1>
+
+<div id="app">
+    <div v-html="msg"> Que seto! </div>
+</div>
+
+<script>
+data = {
+    'msg': 'Esto es un <b>aviso</b>'
+    };
+
+var vm = new Vue({
+    el:'#app',
+    data: data
+    });
+</script>
+
+</body>
+</html>
+
+
