@@ -1,2 +1,4 @@
 django
-django
+pytest
+pytest-sugar
+pytest-django
