@@ -1,0 +1,28 @@
+<html>
+<head>
+ <title>Vue.js lab - lab02 - v-html</title>
+<script src="lib/js/vue.js"></script>
+</head>
+<body>
+<h1>Vue.js lab - lab04: La directiva v-model</h1>
+
+<div id="app">
+  <form>
+    <input type="text" name="txt" v-model="nombre">
+    <p>Hola, {{ nombre }}</p>
+  </form>
+</div>
+
+<script>
+var data = {
+    nombre: 'Federico Mendelson Bartholdy'
+  };
+
+var vm = new Vue({
+    el:'#app',
+    data: data
+    });
+</script>
+
+</body>
+</html>
