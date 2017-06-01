@@ -1,18 +1,29 @@
 <html>
 <head>
  <title>Vue.js lab - lab02 - v-html</title>
- <script src="lib/js/vue.js"></script>
-</head> 
+<script src="lib/js/vue.js"></script>
+<style>
+.warning {
+  padding: 1em;
+  background-color: Maroon;
+  font-size: 120%;
+  color: yellow;
+  border: 2px solid red;
+}
+</style>
+</head>
 <body>
 <h1>Vue.js lab - lab02 - v-html</h1>
 
 <div id="app">
-    <div v-html="msg"> Que seto! </div>
+    <div v-html="msg">  </div>
 </div>
 
 <script>
 data = {
-    'msg': 'Esto es un <b>aviso</b>'
+    'msg': '<p class="warning">'
+         + 'Esto es un <b>aviso</b>'
+         + '</p>'
     };
 
 var vm = new Vue({
@@ -23,5 +34,3 @@ var vm = new Vue({
 
 </body>
 </html>
-
-

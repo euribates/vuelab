@@ -1,0 +1,26 @@
+<html>
+<head>
+ <title>Vue.js lab - lab 5: La directiva v-if</title>
+<script src="lib/js/vue.js"></script>
+</head>
+<body>
+<h1>Vue.js lab - lab 5: La directiva v-if</h1>
+
+<div id="app">
+  <p v-if="flag">Cara</p>
+  <p v-if="!flag">Cruz</p>
+</div>
+
+<script>
+var data = {
+    flag: true
+  };
+
+var vm = new Vue({
+    el:'#app',
+    data: data
+    });
+</script>
+
+</body>
+</html>

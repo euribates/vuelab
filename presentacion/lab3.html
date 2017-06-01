@@ -1,0 +1,30 @@
+<html>
+<head>
+ <title>Vue.js lab - lab02 - v-html</title>
+<script src="lib/js/vue.js"></script>
+<style>
+.redbox { border: 2px solid red; background-color: maroon; color:white }
+.bluebox { border: 2px solid blue; background-color: DarkBlue; color:white }
+</style>
+</head>
+<body>
+<h1>Vue.js lab - lab03: La directiva v-bind</h1>
+
+<div id="app">
+    <div v-bind:align="position" v-bind:class="klass"> Hola, mundo </div>
+</div>
+
+<script>
+var data = {
+    position: 'left',
+    klass: 'redbox'
+  };
+
+var vm = new Vue({
+    el:'#app',
+    data: data
+    });
+</script>
+
+</body>
+</html>
