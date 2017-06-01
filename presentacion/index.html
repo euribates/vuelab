@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 		<link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/fullscreen-img.css">
+
 
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -30,328 +32,508 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section>
-            <img src="./art/hogwarts.gif"></p>
+
+        <section>
+            <img src="./art/Harry-Potter-Orden-Fenix.png">
+        </section>
+
+
+        <section>
+            <h3>Desarrollo web 101</h3>
+            <ul>
+                <li>HTML <i class="fragment highlight-red">Estructura y Contenidos</i></li>
+                <li>CSS  <i class="fragment highlight-red">Presentación</i></li>
+                <li>Javascript  <b class="fragment highlight-green">Interacción</b></li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Programar javascript</h3>
+            <h4>sin librerías ni frameworks</h4>
+            <img src="./art/joker.gif"></img>
+        </section>
+
+
+        <section>
+            <h3>Javascript con jQuery</h3>
+            <ul>
+                <li>Simple</li>
+                <li>Potente</li>
+                <li>Ligero</li>
+                <li>Está muy bien ... <span class="fragment">para cosas sencillas</span>
+                </li>
+            </ul>
+        </section>
+
+
+        <section>
+            <img src="./art/video-parcan.png" width="80%"></img>
         </section>
 
         <section>
-
-              <h1>Vue.js</h1>
-              <h4>El <i>framework javascript</i> para <i>muggles</i></h4>
-              <img src="./art/vue-logo.svg">
-
-
+            <h3>Como debe funcionar</h3>
+            <ul>
+                <li>A la izquierda hay un listado de comentarios</li>
+                <li>A medida que el vídeo avance, se debe resaltar el
+                    comentario pertinente</li>
+                <li>Si pulsamos en el comentario, reposiciona el vídeo</li>
+            </ul>
+            <img src="art/video-parcan.png" width="280">
         </section>
 
+
         <section>
-
-              <h2>Desarrollo web 101</h2>
-              <ul>
-                  <li>HTML <i class="fragment highlight-red">Estructura y Contenidos</i></li>
-                  <li>CSS  <i class="fragment highlight-red">Presentación</i></li>
-                  <li>Javascript  <b class="fragment highlight-green">Interacción</b></li>
-              </ul>
-
-          </section>
-
-          <section>
-
-              <h3>Programar javascript</h3>
-              <h4>sin librerías ni frameworks</h4>
-              <img src="art/joker.gif"></img>
-
-          </section>
-
-          <section>
-
-              <h2>Javascript con jQuery</h2>
-              <ul>
-                  <li>Simple</li>
-                  <li>Potente</li>
-                  <li>Ligero</li>
-                  <li>Está muy bien ... <span class="fragment">para cosas sencillas</span>
-                  </li>
-              </ul>
-
-          </section>
-
-          <section>
-              <p>Ejemplo</p>
-                  <img src="art/video-parcan.png">
-          </section>
-
-          <section>
-              <h3>Como debe funcionar</h3>
-                  <ul>
-                      <li>A la izquierda hay un listado de
-                          comentarios, con un timestamp</li>
-                      <li>A medida que el vídeo avance, se debe resaltar el
-                          comentario pertinente</li>
-                      <li>Si pulsamos en el comentario, posiciona el vídeo
-                          en ese timestamp</li>
-                  </ul>
-                  <img src="art/video-parcan.png" width="300">
-
-          </section>
-
-          <section>
-              <h3>Hasta aquí, bien</h3>
-              <ul>
+            <h3>Hasta aquí, bien</h3>
+            <ul>
               <li>Es factible hacerlo con jQuery</li>
               <li>De hecho, estaba así</li>
               <li>Pero llegan nuevas especificaciones</li>
-                  <ul>
-                      <li class="fragment">Contador de tiempo real (Hora de inicio + timestamp)</li>
-                      <li class="fragment">Controles play/pause adicionales</li>
-                      <li class="fragment">Al hacer pause, queremos cambiar la url
-                       </li>
-                      </ul>
-              </ul>
-              <aside class="notes">
-                  Añadir una marca de tipo #<offset> para poder
-                  enlazar justo a ese momento.
-              </aside>
-          </section>
-
-          <section>
-						  <h3>jQuery empieza a quedarse pequeño</h3>
-              <ul>
-                  <li>Demasiadas interacciones cruzadas</li>
-                  <li>Código confuso, frágil y difícil de modificar</li>
-                  <li>Todos las funciones tienen que saber de todo</li>
-                  <li>Por ejemplo, el botón de pause debe:</p>
-                  <ul>
-                      <li class="fragment">Poner el vídeo en pausa</li>
-                      <li class="fragment">Cambiar la URL</li>
-                      <li class="fragment">Cambiar su propia imagen (de
-                          <i class="fa fa-pause" aria-hidden="true"></i> a
-                          <i class="fa fa-play" aria-hidden="true"></i>)</li>
-                      <li class="fragment">Parar el contador de tiempo real</li>
-                      <li class="fragment">etc ...</li>
-                  </li>
-              </ul>
-          </section>
-
-          <section>
-              <h2>Algo así</h2>
-              <img src="art/three-stooges.gif">
-          </section>
-
-          <section>
-              <h2>Entornos reactivos</h2>
-
-                 <p>Para resolver estos problemas se desarrollan
-                  frameworks reactivos, que se basan en:</p>
-                  <ul>
-                  <li class="fragment">El patron <b>MVVM</b> (Modelo Vista VistaModelo)</li>
-                  <li class="fragment"><b>data-binding</b> y <b>two way data-binding</b></li>
-                  </ul>
-
-          </section>
+                <ul>
+                    <li class="fragment">Contador de tiempo real (Hora de inicio + timestamp)</li>
+                    <li class="fragment">Controles play/pause adicionales</li>
+                    <li class="fragment">Al hacer pause, queremos cambiar la url</li>
+                </ul>
+            </ul>
+            <aside class="notes">
+                Añadir una marca de tipo #<offset> para poder
+                enlazar justo a ese momento.
+            </aside>
+        </section>
 
 
-          <section>
-
-              <h2>El patron MVVM (Modelo Vista VistaModelo)</h2>
-
-              <p>Es una versión del patron <b>MVC</b>. En este
-              caso tenemos un modelo y una vista (o vistas). Pero
-              la interacción entre ellos es
-							<b class="fragment highlight-green">automática</b>, no se
-              implementa con un controlador sino que
-							<b class="fragment highlight-green">se declara</b>.</p>
-
-          </section>
-
-          <section>
-              <h2>Data-bindibg</h2>
-              <p>Al cambiar un dato en el modelo, este cambio se
-              refleja o propaga de inmediato a la vista o vistas
-              que dependan de él</p>
-          </section>
-
-          <section>
-              <h2>Hola, mundo en Vue.js</h2>
-
-              <p><a href="lab1.html">Lab 1 - Data binding</a></p>
-          </section>
-
-          <section>
-						<img src="./art/lab1-1.png">
-          </section>
-
-          <section>
-              <h3>Obsérvese que...</h3>
-              <ul>
-                  <li>Al iniciar Vue especificamos el elemento en el que puede
-                  actuar, en este caso, <code>#app</code>.
-                  Vue no podrá
-                  interactuar ni le afectará nada que no esté dentro de
-                  ese elemento</li>
-
-                  <li>Usamos los delimitador
-                  <code>{{</code>, <code>}}</code> para
-                  realizar un enlace o <i>binding</i> entre
-									la página y nuestro modelo.</li>
-
-                  <li>La página es
-										<b class="fragment highlight-green">reactiva</b></li>
-              </ul>
-
-              <aside class="notes">
-                  Cambiar el valor de data.nombre usando la consola
-                  </aside>
-
-          </section>
-
-          <section>
-              <h3>Vue tags: v-html</h3>
-              <p>Podemos vincular con el contenido, respetando las marcas html
-              con la <b>directiva</b> <code>v-html</code></p>
-
-              <p><a href="lab2.html">Lab 2: La directiva v-html</a></p>
-          </section>
-
-					<section>
-						<img src="./art/lab2-1.png">
-          </section>
+        <section>
+        <h3>jQuery empieza a quedarse pequeño</h3>
+        <ul>
+            <li>Demasiadas interacciones cruzadas</li>
+            <li>Código confuso, frágil y difícil de modificar</li>
+            <li>Todos las funciones tienen que saber de todo</li>
+            <li>Por ejemplo, el botón de pause debe:</p>
+            <ul>
+                <li class="fragment">Poner el vídeo en pausa</li>
+                <li class="fragment">Cambiar la URL</li>
+                <li class="fragment">Cambiar su propia imagen (de
+                    <i class="fa fa-pause" aria-hidden="true"></i> a
+                    <i class="fa fa-play" aria-hidden="true"></i>)</li>
+                <li class="fragment">Parar el contador de tiempo real</li>
+                <li class="fragment">etc ...</li>
+            </li>
+            </ul>
+        </section>
 
 
-          <section>
-							<h3>Obsérvese que...</h3>
-              <ul>
-                  <li>Podemos almacenar el resultado de la llamada a Vue
-										en una variable (<code><b>vm</b></code> en este
-										caso)</li>
-									<li>Todas las directivas de vue empieza con
-										<code>v-</code></li>
-              </ul>
-          </section>
+        <section>
+            <h3>Algo así</h3>
+            <img src="./art/three-stooges.gif">
+        </section>
 
 
-					<section>
-						   <h3>Vincular un atributo html</h3>
-
-							 <p>Podemos vincular un dato de nuestro modelo
-								 con un atributo; para ello usamos la directiva
-								 <code><b>v-bind</b></code></p>
-
-								 <p><a href="lab3.html">Lab 3: La directiva v-bind</a></p>
-
-	            <aside class="notes">
-                  Cambiar el valor de data.position a "right", "middle" <ol>
-                  	"left"
-									</aside>
-					</section>
+        <section>
+            <h3>Entornos reactivos</h3>
+            <p>Para resolver estos problemas se desarrollan
+            frameworks reactivos, que se basan en:</p>
+            <ul>
+            <li class="fragment">El patron <b>MVVM</b> (Modelo Vista VistaModelo)</li>
+            <li class="fragment"><b>data-binding</b> y <b>two way data-binding</b></li>
+            </ul>
+        </section>
 
 
-					<section>
-						<img src="./art/lab3-1.png">
-          </section>
-
-          <section>
-							<h3>Obsérvese que...</h3>
-              <ul>
-                  <li>Lo más habitual es para cambiar la clase, aunque
-									se puede modificar cualquier atributo</li>
-									<li>Se puede abreviar de la siguiente manera:
-									</li>
-									<p align="middle"><code>v-bind:href</code> ≌ <code>:href</code></p>
-
-              </ul>
-          </section>
+        <section>
+            <h3>El patron MVVM (Modelo Vista VistaModelo)</h3>
+            <p>Es una versión del patron <b>MVC</b>. En este
+            caso tenemos un modelo y una vista (o vistas). Pero
+            la interacción entre ellos es
+                        <b class="fragment highlight-green">automática</b>, no se
+            implementa con un controlador sino que
+                        <b class="fragment highlight-green">se declara</b>.</p>
+        </section>
 
 
-          <section>
-              <h3>Two-way data binding</h3>
-
-						  <p>Podemos realizar una vinculación de doble
-								sentido, es decir, que los cambios en el modelo
-								se reflejaran en la vista, y los cambios en
-								la vista se reproducirán en el modelo</p>
-
-							<p>para ello usaremos la directiva
-								<code>v-model</code></p>
-
-								<p><a href="lab4.html">Lab 4: La directiva v-model</a></p>
-
-          </section>
-
-					<section>
-						<img src="./art/lab4-1.png">
-          </section>
+        <section>
+            <h3>Data-bindibg</h3>
+            <p>Al cambiar un dato en el modelo, este cambio se
+            refleja o propaga de inmediato a la vista o vistas
+            que dependan de él</p>
+        </section>
 
 
-					<section>
-						<h3>Las directivas v-if y v-show</h3>
-						<ul>
-							<li>Las dos permite controlar si un elemento aparece
-								o no en la página</li>
-							<li>La diferencia es que con <code>v-if</code> el
-								elemento realmente estará o no en el arbol DOM, dependiendo
-								del predicado, pero con <code>v-show</code> el
-								elementos siempre estará, y será visible
-								o no en función del predicado</li>
-							</ul>
-							<p><a href="lab5.html">Lab 5: La directiva v-if</a></p>
-						</section>
+        <section>
+            <h3>Hola, mundo en Vue.js</h3>
+            <p indent="middle"><a href="lab1.html">Lab 1 - Data binding</a></p>
+        </section>
 
 
-						<section>
-							<img src="./art/lab5-1.png">
-	          </section>
+        <section>
+            <img src="./art/lab1-1.png">
+        </section>
 
 
-						<section>
-								<h3>Obsérvese que...</h3>
-	              <ul>
-	                  <li>dentro de la condición podemos incluir expresiones
-										en javascript (solo una línea)</li>
-										<li>Si queremos que la directiva afecte a varias
-											etiquetas, podemos agruparlas <code>&lt;template v-if="..."&gt;</code>
-											y <code>&lt;/template&gt;</code>, estas desaparecen
-											en el resultado final</li>
-										<li>Existe la directiva <code>v-else</code></li>
-									</ul>
-	          </section>
+        <section>
+            <h3>Obsérvese que...</h3>
+            <ul>
+                <li>Al iniciar Vue especificamos el elemento en el que puede
+                actuar, en este caso, <code>#app</code>.
+                Vue no interactuará ni afectará nada que no esté dentro de
+                ese elemento</li>
 
-						<section>
-								<h3>falta</h3>
-								<ul>
-									<li>v-for</li>
-									<li>v-on</li>
-									<li>filtros</li>
-									<li>componentes</li>
-									<li>Toda la carajera si lo montas en servidor</li>
-								<ul>
-						</section>
+                <li>Usamos los delimitador
+                <code>{{</code>, <code>}}</code> para
+                realizar un enlace o <i>binding</i> entre
+                la página y nuestro modelo.</li>
 
-						<section>
-							<h3>Explica como funciona página de grabacion ahora</h3>
-							  <ul>
-							  	<li>misma funcionalidad aprox 30% código</li>
-							  	<li>nueva funcionalidad aprox 90% código (aun menos
-										codigo que en la version anterior con jQuery)</li>
-									<li>mucho más fácil de comprender/reparar/extender</li>
-							  </ul>
-						</section>
+                <li>La página es <b class="fragment highlight-green">reactiva</b></li>
+            </ul>
 
-						<section>
-							<h3>Framework similares a Vue.js</h3>
-							<p>...</p>
-						</section>
+            <aside class="notes">
+                Cambiar el valor de data.nombre usando la consola
+                </aside>
+        </section>
 
-						<section>
-							<h3>Caracteísticas que me gustan de Vue.js</h3>
-							<p>...</p>
-						</section>
 
-						<section>
-							<h3>Trucos finales<h3>
-							<p>Para usarla desde django</p>
-							<p>Cambiar los {{ }} por [[ ]]<p>
-							<p>estilo v.cloak</p>
-						</section>
+        <section>
+            <h3>Vue tags: v-html</h3>
+            <p>Podemos vincular con el contenido, respetando las marcas html
+            con la <b>directiva</b> <code>v-html</code></p>
+
+            <p indent="middle"><a href="lab2.html">Lab 2: La directiva v-html</a></p>
+        </section>
+
+
+        <section>
+            <img src="./art/lab2-1.png">
+        </section>
+
+
+        <section>
+            <h3>Obsérvese que...</h3>
+            <ul>
+                <li>Podemos almacenar el resultado de la llamada a Vue
+                en una variable (<code><b>vm</b></code> en este
+                caso)</li>
+                <li>Todas las directivas de vue empieza con
+                <code>v-</code></li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Vincular un atributo html</h3>
+            <p>Podemos vincular un dato de nuestro modelo
+            con un atributo; para ello usamos la directiva
+            <code><b>v-bind</b></code></p>
+
+            <p indent="middle"><a href="lab3.html">Lab 3: La directiva v-bind</a></p>
+
+            <aside class="notes">
+                Cambiar el valor de data.position a "right", "middle" o "left"
+            </aside>
+        </section>
+
+
+        <section>
+            <img src="./art/lab3-1.png">
+        </section>
+
+        <section>
+            <h3>Obsérvese que...</h3>
+            <ul>
+                <li>Lo más habitual es para cambiar la clase, aunque
+                    se puede modificar cualquier atributo</li>
+                <li>Se puede abreviar de la siguiente manera:</li>
+            </ul>
+            <p align="middle"><code>v-bind:href</code> ≌ <code>:href</code></p>
+        </section>
+
+
+        <section>
+            <h3>Two-way data binding</h3>
+            <p>Podemos realizar una vinculación de doble
+                sentido, es decir, que los cambios en el modelo
+                se reflejaran en la vista, y los cambios en
+                la vista se reproducirán en el modelo</p>
+            <p>para ello usaremos la directiva
+                <code>v-model</code></p>
+            <p indent="middle"><a href="./lab4.html">Lab 4: La directiva v-model</a></p>
+        </section>
+
+
+        <section>
+            <img src="./art/lab4-1.png">
+        </section>
+
+
+        <section>
+            <h3>Las directivas v-if y v-show</h3>
+            <ul>
+                <li>Las dos permite controlar si un elemento aparece
+                    o no en la página</li>
+                <li>La diferencia es que con <code>v-if</code> el
+                    elemento realmente estará o no en el arbol DOM, dependiendo
+                    del predicado, pero con <code>v-show</code> el
+                    elementos siempre estará, y será visible
+                    o no en función del predicado</li>
+            </ul>
+            <p align="middle"><a href="./lab5.html">Lab 5: La directiva v-if</a></p>
+        </section>
+
+
+        <section>
+            <img src="./art/lab5-1.png">
+        </section>
+
+
+        <section>
+            <h3>Obsérvese que...</h3>
+            <ul>
+                <li>dentro de la condición podemos incluir expresiones
+                    en javascript (solo una línea)</li>
+                <li>Si queremos que la directiva afecte a varias
+                    etiquetas, podemos agruparlas <code>&lt;template v-if="..."&gt;</code>
+                    y <code>&lt;/template&gt;</code>, estas desaparecen
+                    en el resultado final</li>
+                <li>Existe la directiva <code>v-else</code></li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>La directiva v-for</h3>
+            <ul>
+                <li>Podemos usar la directiva <code>v-for</code>
+                    para recorrer una lista de datos</li>
+                <li>La sintaxis usa la forma <code>v-for="item in items"</code></li>
+            </ul>
+            <p align="middle"><a href="./lab6.html">Lab 6: iterar con la directiva v-for</a></p>
+            <aside class="notes">
+                Añadir un elemento desde la consola
+                con <tt>vm.$data.tareas.push({texto: 'Cortarme el pelo', prioridad: 3})</tt>
+            </aside>
+        </section>
+
+
+        <section>
+            <img src="./art/lab6-1.png">
+        </section>
+
+
+        <section>
+            <h3>Observaciones</h3>
+            <ul>
+                <li>Podemos obtener el índice con la sintaxis
+                    <code>(item, index) in items</code></li>
+                <li>También se puede iterar por las propiedades de un objeto</li>
+                <li>Ojo con los métodos que no modifican un array, sino que
+                    devuelven uno nuevo</li>
+                <li>Cuidado: Cambios por el índice no son detectados por
+                    Vue, usar siempre <code>shift</code>, <code>unshift</code>,
+                    <code>pop</code>, etc...</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Métodos con v-on</h3>
+            <ul>
+                <li>Podemos vincular acciones con métodos usando
+                    la directiva <code>v-on:<i>evento</i></code></li>
+                <li>Tenemos que definir nuestros métodos en la entrada
+                    <tt>methods</tt> de Vue.
+            </ul>
+            <p align="middle"><a href="./lab7.html">Lab 7: Métodos y la directiva v-on</a></p>
+        </section>
+
+
+        <section>
+            <h3>1/3 Modelo de datos</h3>
+            <img src="./art/lab7-1.png">
+        </section>
+
+
+        <section>
+            <h3>2/3 Instancia Vue</h3>
+            <img src="./art/lab7-2.png">
+        </section>
+
+
+        <section>
+            <h3>3/3 Html</h3>
+            <img src="./art/lab7-3.png">
+        </section>
+
+
+        <section>
+            <h3>Observaciones</h3>
+            <ul>
+                <li>El contenido de v-on es javascript, pero lo normal
+                es que sea una llamada a un método</li>
+                <li>Existen modificadores del evento, en la forma
+                    <code>v-on.event.modifier</code>, por ejemplo
+                    <code>v-on:keyup.enter</code> solo se activa
+                    si la tecla pulsada es enter</li>
+                <li>Podemos abreviar <code>v.bind:evento=...</code>
+                    como <code>@evento=...</code></li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Filtros</h3>
+            <ul>
+                <li>Vue.js permite definir filtros para presentación y formateo
+                de resultados</li>
+                <li>Se usan igual que los filtros de Django, después del
+                    caracter pipe "|"</li>
+                <li>Podemos encadenar varios filtros</li>
+                <li>Pueden tener argumentos adicionales (Y más de uno, no como Django)</li>
+                <li>Se declaran en la entrada <code>filters</code></li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Componentes</h3>
+            <ul>
+                <li>Podemos hacer componentes, que son como instancias pequeñas de vue con
+                sus propias plantillas, metodos, modelos, etc...</li>
+                <li>Muy interesantes y muy potentes</li>
+                <li>Los componentes pueden usar otros componentes, lo que
+                    permite estructurar la aplicación a modo de bloques</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Cosas que no podremos ver hoy</h3>
+            <h4>Pero resultan interesantes</h4>
+            <h6>Si tienes javascript en el servidor</h6>
+            <ul>
+                <li>Componentes en un solo vichero .vue</li>
+                <li>Includes dinámicos de código javascript</li>
+                <li>Vuex para gestionar el estado de la aplicación</li>
+                <li>Plugins</li>
+                <li>Testing</li>
+                <li>One-page apps</li>
+                <li><i>A lot of stuff...</i></li>
+                <ul>
+        </section>
+
+
+        <section>
+            <h3>Yo vine aquí a hablar de mi libro (1/2)</h3>
+            <img src="./art/video-parcan-playing.png">
+            <aside class="notes">Mejor verlo en vivo, si se puede</aside>
+        </section>
+
+
+        <section>
+            <h3>Yo vine aquí a hablar de mi libro (2/2)</h3>
+            <img src="./art/video-parcan-playing.png">
+            <aside class="notes">Mejor verlo en vivo, si se puede</aside>
+        </section>
+
+
+        <section>
+            <h3>Mejoras obtenidas</h3>
+            <ul>
+                <li>De jquery a Vue.js, con la misma
+                    funcionalidad inicial, produjo un código ≊ 30% más
+                    pequeño</li>
+                <li class="fragment">Con la nueva funcionalidad, ≊ 90%
+                    código que en la version anterior con jQuery (Awesome!)</li>
+                <li class="fragment">Mucho más fácil de comprender,
+                    reparar y/o extender</li>
+                <li class="fragment">Puedes seguir usando jQuery, no son incompatibles</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Truco 1: Usar en Django</h3>
+            <ul>
+                <li>Las plantillas de Django usan el mismo
+                    sistema que Vue; los delimitadores {{ y }}</li>
+
+                <li>Para usar Vue.js desde Django con comodidad, hay un
+                parámetro en la
+                configuración, <code>delimiters</code>
+                que permite usar como delimitadores los que tú especifiques, yo
+                cambio {{ }} por [[ ]]</li>
+            </ul>
+
+            <p align="center"><tt>delimiters: ['[[', ']]'],</tt></p>
+        </section>
+
+        <section>
+            <h3>Truco 2: Haz que desaparezcan los bigotes {{ }}</h3>
+            <ul>
+                <li>En la carga de la página, se pueden ver, las
+                marcas de plantilla hasta que Vue haya terminado
+                de cargarse e inicializarse. Puede quedar Queda feo.</li>
+
+                <li>Para resolverlo, Vue aplica inicialmente la
+                directiva <code>v-cloak</code> a todo lo que tenga bajo su
+                control, y cuando ya esté
+                completamente operativo la quita.</li>
+
+                <li>En resumen, esto en tu hoja de estilos
+                    debería resolver el problema:</li>
+            </ul>
+            <p indent="middle"><code>[v-cloak] { display:none; }</code></p>
+        </section>
+
+
+        <section>
+            <h3>Frameworks similares a Vue.js</h3>
+            <ul>
+                <li><a href="https://angularjs.org/">Angular.js</a></li>
+                <li><a href="https://facebook.github.io/react/">React</a></li>
+                <li><a href="http://knockoutjs.com/">Knockout.js</a></li>
+                <li>Ember, Polymer, Backbone... <i>You named it</i></li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>¿Por qué me gusta Vue.js? (1/2)</h3>
+            <h4><i>Warning: Absolutely Subjective Opinion Ahead!</i></h4>
+            <ul>
+                <li>Pequeño tamaño</li>
+
+                <li class="fragment">Los modelos son simples objetos javascript, no hay que
+                heredar, registrar, llamarlos de deteminada manera, etc...</li>
+
+                <li class="fragment">Se puede empezar a usar simplemente añadiendo la librería vue.js
+                    (Luego si quieres te puedes liar la manta a la cabeza, pero no es obligatorio
+                    instalar 20 dependencias para el hola mundo)</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>¿Por qué me gusta Vue.js? (2/2)</h3>
+            <h4><i>Warning: Absolutely Subjective Opinion Ahead!</i></h4>
+            <ul>
+
+                <li>No es de facebook</li>
+
+                <li class="fragment">Para componentes usa los tres lenguajes que ya conocemos:
+                    Html, css y javascript para contenidos, presentacion y lógica</li>
+
+                <li class="fragment">Si quieres, puedes entender lo que pasa internamente,
+                    no hay "magia"</li>
+
+            </ul>
+        </section>
+
+        <section>
+            <h3>Vue.js - El Framework javascript para muggles</h3>
+            <img src="./art/hogwarts.gif" width="240"></p>
+            <p>Juan Ignacio Rodriguez de León</p>
+            <p>euribates at gmail.com</p>
+            <p>@jileon en twitter</p>
+        </section>
+
 
 
 
@@ -371,6 +553,7 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+          { src: 'lib/js/fullscreen-img.js' },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});

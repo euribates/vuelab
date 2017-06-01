@@ -1,0 +1,30 @@
+<html>
+<head>
+ <title>Vue.js lab - lab 6: Bucles con la directiva v-for</title>
+<script src="lib/js/vue.js"></script>
+</head>
+<body>
+<h1>Vue.js lab - lab 6: Bucles con la directiva v-for</h1>
+
+<div id="app">
+  <ul>
+    <li v-for="t in tareas"> {{ t.texto }} - {{ t.prioridad }} </li>
+  </ul>
+</div>
+
+<script>
+var data = {
+    tareas: [
+      {texto: 'Aprender Vue.js', prioridad: 7},
+      {texto: 'Dominar el mundo', prioridad: 9}
+    ]
+  };
+
+var vm = new Vue({
+    el:'#app',
+    data: data
+    });
+</script>
+
+</body>
+</html>
